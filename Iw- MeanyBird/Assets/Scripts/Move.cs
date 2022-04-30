@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 {
     [Header("Default Speed")]
     public float speed;
-    // Start is called before the first frame update
+        // Start is called before the first frame update
     void Start()
     {
 

@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [Header("Spike Object for controlling the game")]
-    public GameObject spikes;
-    [Header("Default Height")]
-    public float height;
+    [Header("Spikes Object for controling the game")]
+        public GameObject spikes;
+        [Header("Default Height")]
+        public float height;
     // Start is called before the first frame update
     void Start()
     {
-transform.position = new Vector3(5, Random.Range(-height, height), 0);
+        InvokeRepeating("InstantianteObjects",1f,4f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        transform.position = new Vector3(5, Random.Range(-height, height),0);
     }
-    void InstantiateObjects(){
-        Instantiate(spikes, transform.position, transform.rotation);
 
+    void InstantianteObjects()
+    {
+        Instantiate(spikes, transform.position, transform.rotation);
     }
 }
