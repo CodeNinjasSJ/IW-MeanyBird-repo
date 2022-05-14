@@ -34,7 +34,8 @@ private float objectHeight;
         || collision.gameObject.tag=="LowSpike"
         || collision.gameObject.tag=="Ground")
         {
-            Time.timeScale = 0;
+        
+            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         }
     }
 }
